@@ -1,0 +1,41 @@
+cookie:
+  expiry_days: 30
+  key: mi_cookie # Must be a string
+  name: nombre_cookie
+credentials:
+  usernames:
+    cerebro:
+      email: diego@esponsor.com
+      failed_login_attempts: 0 # Will be managed automatically
+      name: Diego Gajardo
+      first_name: Diego
+      last_name: Gajardo
+      logged_in: False # Will be managed automatically
+      password: $2b$12$aFha6Spb1dleeggJuIxdAuK2WM9VRTqvhibu8VQ60D6pL6YbSRccG # Will be hashed automatically
+      roles: # Optional
+      - admin
+      - editor
+      - viewer
+    cornetin:
+      email: j@esponsor.com
+      failed_login_attempts: 0 # Will be managed automatically
+      name: Juan Amézquita
+      first_name: Juan
+      last_name: Amezquita
+      logged_in: False # Will be managed automatically
+      password: $2b$12$jFm9ZGAf1Fg2om5W7lKO5./VHznk0yWiCRLuiXhTRtuwNovIg3I4S # Will be hashed automatically
+      roles: # Optional
+      - viewer
+oauth2: # Optional
+  google: # Follow instructions: https://developers.google.com/identity/protocols/oauth2
+    client_id: # To be filled
+    client_secret: # To be filled
+    redirect_uri: # URL to redirect to after OAuth2 authentication
+  microsoft: # Follow instructions: https://learn.microsoft.com/en-us/graph/auth-register-app-v2
+    client_id: # To be filled
+    client_secret: # To be filled
+    redirect_uri: # URL to redirect to after OAuth2 authentication
+    tenant_id: # To be filled
+pre-authorized: # Optional
+  emails:
+  - dgajardo131@gmail.com
