@@ -1,15 +1,17 @@
 [theme]
 # Color primario de elmentos interactivos
-primaryColor = "#d33682"
+primaryColor = "#00569e"
 
 # Color de fondo para el area principal
-backgroundColor = "#002b36"
+backgroundColor = "#ffffff"
 
 # Color de fondo para el sidebar y elementos interactivos
-secondaryBackgroundColor = "#586e75"
+secondaryBackgroundColor = "#f3f3f3"
 
 # Color para textos
-textColor = "#fff"
+textColor = "#000000"
+
+font = "serif"
 
 [client]
-toolbarMode = "minimal"
+toolbarMode = "viewer"

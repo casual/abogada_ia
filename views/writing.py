@@ -8,10 +8,10 @@ def response_gen(response):
         yield word + " "
         time.sleep(0.05)
 
-def run_writing(escrito: str):
+def run_strategy(escrito: str):
     api_url = f"{st.secrets['BASE_API_URL']}/lf/{st.secrets['LANGFLOW_ID']}/api/v1/run/{st.secrets['ENDPOINT']}"
 
-    prompt = "Mejora la redaccion del siguiente escrito: " + escrito
+    prompt = "Redacta una estrategia legal para el siguiente caso: " + escrito
 
     payload = {
         "input_value": prompt,
@@ -36,7 +36,7 @@ def setup_writing():
             st.markdown(message["content"])
     
     # Chat escuchando
-    prompt = st.chat_input("Ingresa aquí tu mensje...")
+    prompt = st.chat_input("Ingresa aquí tu mensaje...")
     if prompt:
         # Escribe el mensaje del usuario y lo guarda
         with st.chat_message("user"):
@@ -45,7 +45,7 @@ def setup_writing():
     
         # Procesa el mensaje
         with st.spinner("Pensando..."):
-            response = run_writing(prompt)
+            response = run_strategy(prompt)
         response = response["outputs"][0]["outputs"][0]["results"]["message"]["text"]
 
         # Escribe el mensaje del asistente y lo guarda
